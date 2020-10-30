@@ -1,7 +1,16 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: 'app-bottom-bar',
   templateUrl: './bottom-bar.component.html'
 })
-export class BottomBarComponent {}
+export class BottomBarComponent {
+
+  componentName='TestComponent';
+  chkStatus = false;
+
+  ngOnInit() {
+    setTimeout(() => this.chkStatus = true, 4000);
+  }
+  
+}
